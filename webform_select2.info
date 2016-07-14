@@ -2,6 +2,7 @@ name = Webform Select2
 description = Use the select2 widget on all webform &lt;select&gt; elements.
 backdrop = 1.x
 package = Webform
+type = module
 
 dependencies[] = webform
 dependencies[] = libraries
