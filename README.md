@@ -2,7 +2,7 @@
 
 This module adds select2 widget to all select elements in a webform.
 
-![Webform Select2](images/webform-select2.png)
+![Webform Select2](https://github.com/backdrop-contrib/webform_select2/blob/1.x-1.x/images/webform-select2.png)
 
 ##Installation and Usage
 
