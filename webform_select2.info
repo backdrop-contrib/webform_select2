@@ -5,4 +5,4 @@ package = Webform
 type = module
 
 dependencies[] = webform
-dependencies[] = libraries
+dependencies[] = select2
