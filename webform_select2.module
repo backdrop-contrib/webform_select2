@@ -5,10 +5,13 @@
  */
 function webform_select2_form_alter(&$form, &$form_state, $form_id) {
   if (strpos($form_id, 'webform_client_form') === 0) {
-    $select2_path = $path = libraries_get_path('select2');
-    $form['#attached']['js'][] = $select2_path . '/dist/js/select2.min.js';
-    $form['#attached']['css'][] = $select2_path . '/dist/css/select2.min.css';
-    $form['#attached']['js'][] = backdrop_get_path('module', 'webform_select2') . '/js/webform_select2.js';
+    backdrop_add_library('select2', 'select2');
+    $form['#attached']['js'][] = array(
+      'type' => 'file',
+      'scope' => 'footer',
+      'weight' => -10,
+      'data' => backdrop_get_path('module', 'webform_select2') . '/js/webform_select2.js',
+    );
   }
 }
 
