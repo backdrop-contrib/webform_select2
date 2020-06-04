@@ -1,0 +1,27 @@
+<?php
+/**
+ * @file
+ * Includes requirements functionality.
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function webform_select2_requirements($phase) {
+  $requirements = array();
+
+  if ($phase == 'runtime') {
+    $t = get_t();
+
+    // Check for the Select2 module.
+    if (!module_exists('select2')) {
+      $requirements['select2_webform'] = array(
+        'title' => $t('Select2 Webform'),
+        'value' => $t('The required Select2 module is not installed'),
+        'severity' => REQUIREMENT_ERROR,
+      );
+    }
+  }
+
+  return $requirements;
+}
